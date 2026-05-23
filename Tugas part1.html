@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aplikasi Kasir Belanja</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            background-color: #f2f2f2;
+        }
+
+        .box{
+            width: 350px;
+            background: white;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h2{
+            text-align: center;
+        }
+
+        input{
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        button{
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            background-color: green;
+            color: white;
+            border: none;
+        }
+
+        #hasil{
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h2>Aplikasi Kasir Belanja</h2>
+
+        <input type="text" id="barang" placeholder="Nama Barang">
+
+        <input type="number" id="harga" placeholder="Harga Barang">
+
+        <input type="number" id="jumlah" placeholder="Jumlah Barang">
+
+        <button onclick="hitung()">Hitung Total</button>
+
+        <div id="hasil"></div>
+
+    </div>
+
+<script>
+
+function hitung(){
+
+    let barang = document.getElementById("barang").value;
+
+    let harga = parseInt(document.getElementById("harga").value);
+
+    let jumlah = parseInt(document.getElementById("jumlah").value);
+
+    // Operator Aritmatika
+    let total = harga * jumlah;
+
+    // Operator Pembanding
+    let diskon = 0;
+
+    if(total >= 300000){
+        diskon = 20000;
+    }
+
+    // Operator Penugasan
+    total -= diskon;
+
+    // Output
+    document.getElementById("hasil").innerHTML =
+
+    "Nama Barang : " + barang + "<br><br>" +
+
+    "Total Belanja : Rp. " + total + "<br><br>" +
+
+    "Diskon : Rp. " + diskon;
+
+}
+
+</script>
+
+</body>
+</html>
