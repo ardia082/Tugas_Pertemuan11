@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IF ELSE Kompleks</title>
+</head>
+<body>
+
+    <h2>Program Penentuan Nilai Mahasiswa</h2>
+
+    <script>
+        // Input nilai
+        let nilai = prompt("Masukkan nilai mahasiswa:");
+
+        // Konversi ke angka
+        nilai = parseInt(nilai);
+
+        // Percabangan IF ELSE Kompleks
+        if (nilai >= 90 && nilai <= 100) {
+            document.write("Grade A");
+            document.write("<br>Keterangan: Sangat Memuaskan");
+        }
+        else if (nilai >= 80 && nilai < 90) {
+            document.write("Grade B");
+            document.write("<br>Keterangan: Memuaskan");
+        }
+        else if (nilai >= 70 && nilai < 80) {
+            document.write("Grade C");
+            document.write("<br>Keterangan: Cukup");
+        }
+        else if (nilai >= 60 && nilai < 70) {
+            document.write("Grade D");
+            document.write("<br>Keterangan: Kurang");
+        }
+        else if (nilai >= 0 && nilai < 60) {
+            document.write("Grade E");
+            document.write("<br>Keterangan: Gagal");
+        }
+        else {
+            document.write("Nilai tidak valid!");
+        }
+    </script>
+
+</body>
+</html>

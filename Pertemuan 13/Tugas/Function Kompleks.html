@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Kompleks</title>
+</head>
+<body>
+
+    <h2>Program Menghitung Gaji Karyawan</h2>
+
+    <script>
+
+        // Function menghitung total gaji
+        function hitungGaji(nama, jabatan, jamKerja) {
+
+            let gajiPerJam;
+            let bonus = 0;
+            let totalGaji;
+
+            // Menentukan gaji berdasarkan jabatan
+            if (jabatan == "Manager") {
+                gajiPerJam = 50000;
+            }
+            else if (jabatan == "Supervisor") {
+                gajiPerJam = 40000;
+            }
+            else if (jabatan == "Staff") {
+                gajiPerJam = 30000;
+            }
+            else {
+                gajiPerJam = 20000;
+            }
+
+            // Menghitung bonus jika jam kerja lebih dari 40 jam
+            if (jamKerja > 40) {
+                bonus = 100000;
+            }
+
+            // Menghitung total gaji
+            totalGaji = (gajiPerJam * jamKerja) + bonus;
+
+            // Menampilkan hasil
+            document.write("<h3>Data Karyawan</h3>");
+            document.write("Nama : " + nama + "<br>");
+            document.write("Jabatan : " + jabatan + "<br>");
+            document.write("Jam Kerja : " + jamKerja + " jam<br>");
+            document.write("Bonus : Rp." + bonus + "<br>");
+            document.write("Total Gaji : Rp." + totalGaji);
+        }
+
+        // Memanggil function
+        hitungGaji("Ardiansyah", "Supervisor", 45);
+
+    </script>
+
+</body>
+</html>
