@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Mahasiswa UNPAM</title>
+</head>
+<body>
+    <h2>Data Universitas Pamulang (UNPAM)</h2>
+    <p><strong>Nama Universitas:</strong> Universitas Pamulang</p>
+    <p><strong>Fakultas:</strong> Ilmu Komputer</p>
+    <p><strong>Lokasi:</strong> Tangerang Selatan</p>
+
+    <h3>Daftar Mahasiswa Teknik Informatika</h3>
+    
+    <table border="1" cellpadding="8" cellspacing="0">
+        <tr bgcolor="#ccc">
+            <th>NIM</th>
+            <th>Nama Lengkap</th>
+            <th>Jurusan</th>
+            <th>Fakultas</th>
+        </tr>
+
+        <script>
+            let Fakultas = "Ilmu Komputer";
+            let mahasiswa = { nim: "231011450716", nama: "MUHAMMAD ILHAM ARDIANSYAH", jurusan: "Teknik Informatika" }
+        
+            document.write("<tr>");
+            document.write("<td>" + mahasiswa.nim + "</td>");
+            document.write("<td>" + mahasiswa.nama + "</td>");
+            document.write("<td>" + mahasiswa.jurusan + "</td>");
+            document.write("<td>" + Fakultas + "</td>");
+            document.write("</tr>");
+            lg("Nama :"+mahasiswa.nama+", Nim "+mahasiswa.nim+" "+mahasiswa.jurusan+", Fakultas"+Fakultas);
+        
+            function lg(val){
+                console.log(val);
+            }
+        </script>
+    </table>
+
+    <p><strong>Total Mahasiswa:</strong> <span id="total"></span></p>
+
+    <script>
+        let total = mahasiswa.length;
+        document.getElementById("total").innerText = total;
+    </script>
+</body>
+</html>
